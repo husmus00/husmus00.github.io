@@ -1,7 +1,7 @@
 ---
 title: "My Second Post"
 date: 2022-10-29T16:40:05+03:00
-draft: true
+draft: false
 tags:
 - Research
 ---
