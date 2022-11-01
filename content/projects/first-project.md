@@ -6,4 +6,4 @@ draft: false
 
 ## My First Project
 
-Project goes here
+Project goes here.
