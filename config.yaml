@@ -1,5 +1,5 @@
 languageCode: "en-gb"
-baseUrl: ""
+baseUrl: "husmus.dev"
 title: "husmus.dev"
 # theme: "photophobia"
 theme: ["github.com/Mitrichius/hugo-theme-anubis"]
