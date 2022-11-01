@@ -1,7 +1,6 @@
 languageCode: "en-gb"
 baseUrl: "husmus.dev"
 title: "husmus.dev"
-# theme: "photophobia"
 theme: ["github.com/Mitrichius/hugo-theme-anubis"]
 paginate: 5
 disqusShortname: null # "yourdiscussshortname"
