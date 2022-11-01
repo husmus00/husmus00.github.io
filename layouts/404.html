@@ -1,0 +1,9 @@
+{{ define "main"}}
+<main id="main">
+    <div>
+        <h1>404</h1>
+        Woops, seems like a URL typo!
+        <p id="title"><a href="{{ .Site.BaseURL | relLangURL }}">Back</a></p>
+    </div>
+</main>
+{{ end }}
