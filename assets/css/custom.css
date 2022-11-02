@@ -73,10 +73,15 @@ nav {
     }
 }
 
-.section-title {
+.category-section {
     border-top: thin solid var(--hr-color);
+    padding: 0.8em 0 0.5em 0;
+}
+
+.section-title {
     font-size: 1.2em;
-    padding-top: 1em;
+    font-weight: 600;
+    color: white;
 }
 
 .section-title::before {
@@ -104,6 +109,7 @@ nav {
 
 .post-header {
     margin-bottom: 0.4em;
+    margin-top: 0.8em;
 }
 
 .post-header a {
@@ -112,6 +118,7 @@ nav {
 
 .post-title {
     margin-bottom: 0;
+    margin-top: 0.8em;
 }
 
 .post-list {
@@ -129,7 +136,7 @@ nav {
     border-top: thin solid var(--hr-color);
     padding-bottom: 20px;
     padding-top: 1em;
-    margin-top: 2em;
+    margin-top: 0.5em;
     text-align: center;
     display:flex;
     align-items:center;

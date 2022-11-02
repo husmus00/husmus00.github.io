@@ -8,28 +8,34 @@
         </div>
     </div>
 
-    <h1 class="section-title">Blog Posts:</h1>
-    <div class="articles h-feed">
-        {{ $post_pages := where (where site.Pages "Section" "posts") "Params.hidden" "!=" true }}
-        {{ range (.Paginate $post_pages).Pages }}
-            {{ partial "post-summary.html" . }}
-        {{ end }}
+    <div class="category-section">
+        <a class="section-title" href="/posts/">Blog Posts</a>
+        <div class="articles h-feed">
+            {{ $post_pages := where (where site.Pages "Section" "posts") "Params.hidden" "!=" true }}
+            {{ range (.Paginate $post_pages).Pages }}
+                {{ partial "post-summary.html" . }}
+            {{ end }}
+        </div>
     </div>
 
-    <h1 class="section-title">Research:</h1>
-    <div class="articles h-feed">
-        {{ $research_pages := where (where site.Pages "Section" "research") "Params.hidden" "!=" true }}
-        {{ range (.Paginate $research_pages).Pages }}
-            {{ partial "post-summary.html" . }}
-        {{ end }}
+    <div class="category-section">
+        <a class="section-title" href="/research/">Research</a>
+        <div class="articles h-feed">
+            {{ $research_pages := where (where site.Pages "Section" "research") "Params.hidden" "!=" true }}
+            {{ range (.Paginate $research_pages).Pages }}
+                {{ partial "post-summary.html" . }}
+            {{ end }}
+        </div>
     </div>
 
-    <h1 class="section-title">Projects:</h1>
-    <div class="articles h-feed">
-        {{ $project_pages := where (where site.Pages "Section" "projects") "Params.hidden" "!=" true }}
-        {{ range (.Paginate $project_pages).Pages }}
-            {{ partial "post-summary.html" . }}
-        {{ end }}
+    <div class="category-section">
+        <a class="section-title" href="/projects/">Projects:</a>
+        <div class="articles h-feed">
+            {{ $project_pages := where (where site.Pages "Section" "projects") "Params.hidden" "!=" true }}
+            {{ range (.Paginate $project_pages).Pages }}
+                {{ partial "post-summary.html" . }}
+            {{ end }}
+        </div>
     </div>
 
     {{ partial "pagination.html" . }}
