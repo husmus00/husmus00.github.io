@@ -37,6 +37,10 @@ nav {
     color: var(--accent-colour);
 }
 
+.inline-svg {
+    padding: 0 0.1em;
+}
+
 .homepage-content {
     margin: 1.5em 0;
     display: flex;
