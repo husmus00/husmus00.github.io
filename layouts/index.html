@@ -9,7 +9,7 @@
     </div>
 
     <div class="category-section">
-        <a class="section-title" href="posts">Blog Posts</a>
+        <div class="section-title" ><a href="posts">Blog Posts</a></div>
         <div class="articles h-feed">
             {{ range first 4 (where site.RegularPages "Section" "in" "posts") }}
                 {{ partial "post-summary.html" . }}
@@ -19,7 +19,7 @@
     </div>
 
     <div class="category-section">
-        <a class="section-title" href="research">Research</a>
+        <div class="section-title" ><a href="research">Research</a></div>
         <div class="articles h-feed">
             {{ range first 4 (where site.RegularPages "Section" "in" "research") }}
                 {{ partial "post-summary.html" . }}
@@ -29,7 +29,7 @@
     </div>
 
     <div class="category-section">
-        <a class="section-title" href="projects">Projects:</a>
+        <div class="section-title" ><a href="projects">Projects</a></div>
         <div class="articles h-feed">
             {{ range first 4 (where site.RegularPages "Section" "in" "projects") }}
                 {{ partial "post-summary.html" . }}

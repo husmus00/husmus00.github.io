@@ -1,3 +1,5 @@
+@import url(https://cdn.jsdelivr.net/npm/firacode@6.2.0/distr/fira_code.css);
+
 :root {
     --accent-colour: #ff5858;
 }
@@ -54,7 +56,7 @@ nav {
     align-items:center;
     justify-content: center;
     font-size: 0.9em;
-    font-family: Firacode,monospace;
+    font-family: Firacode, monospace;
 }
 
 .profile-pic {
@@ -85,30 +87,20 @@ nav {
 .section-title {
     font-size: 1.2em;
     font-weight: 600;
+}
+
+.section-title a {
+    font-weight: 600;
     color: white;
+}
+
+a:hover, a:focus, a:active {
+    color: var(--accent-colour);
 }
 
 .section-title::before {
     content: "\25C6  ";
     color: var(--accent-colour);
-}
-
-.half-color-diamond {
-	position: relative;
-	position:relative;
-	font-size:80px;
-	display:inline-block;
- 	color:#FFD600;
-}
-
-.half-color-diamond:before{
-	content: attr(attribute);
-	color:BLUE;
-	position:absolute;
-	top:0;
-	left:0;
-	height:50%;
-	overflow:hidden;
 }
 
 .post-header {
@@ -131,7 +123,7 @@ nav {
 }
 
 .post-info {
-    font-family: Firacode,monospace;
+    font-family: monospace;
     margin-bottom: 1em;
     margin-top: 0;
 }
