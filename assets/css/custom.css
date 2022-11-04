@@ -39,6 +39,10 @@ nav {
     color: var(--accent-colour);
 }
 
+.social-icons a:hover {
+    color: var(--accent-colour);
+}
+
 .inline-svg {
     padding: 0 0.2em;
 }
