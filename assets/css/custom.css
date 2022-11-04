@@ -136,6 +136,11 @@ nav {
     margin-top: 0;
 }
 
+.view-more-posts {
+    font-size: 0.8em;
+    margin-left: 0.8em;
+}
+
 .common-footer {
     border-top: thin solid var(--hr-color);
     padding-bottom: 20px;

@@ -1,0 +1,9 @@
+<div class="category-section">
+    <a class="section-title" href="/research/">Research</a>
+    <div class="articles h-feed">
+        {{ $research_pages := where (where site.Pages "Section" "in" "research") "Params.hidden" "!=" true }}
+        {{ range (.Paginate $research_pages).Pages }}
+            {{ partial "post-summary.html" . }}
+        {{ end }}
+    </div>
+</div>

@@ -9,35 +9,35 @@
     </div>
 
     <div class="category-section">
-        <a class="section-title" href="/posts/">Blog Posts</a>
+        <a class="section-title" href="posts">Blog Posts</a>
         <div class="articles h-feed">
-            {{ $post_pages := where (where site.Pages "Section" "posts") "Params.hidden" "!=" true }}
-            {{ range (.Paginate $post_pages).Pages }}
+            {{ range first 4 (where site.RegularPages "Section" "in" "posts") }}
                 {{ partial "post-summary.html" . }}
             {{ end }}
+            <a class="view-more-posts" href="posts">View more</a>
         </div>
     </div>
 
     <div class="category-section">
-        <a class="section-title" href="/research/">Research</a>
+        <a class="section-title" href="research">Research</a>
         <div class="articles h-feed">
-            {{ $research_pages := where (where site.Pages "Section" "research") "Params.hidden" "!=" true }}
-            {{ range (.Paginate $research_pages).Pages }}
+            {{ range first 4 (where site.RegularPages "Section" "in" "research") }}
                 {{ partial "post-summary.html" . }}
             {{ end }}
+            <a class="view-more-posts" href="research">View more</a>
         </div>
     </div>
 
     <div class="category-section">
-        <a class="section-title" href="/projects/">Projects:</a>
+        <a class="section-title" href="projects">Projects:</a>
         <div class="articles h-feed">
-            {{ $project_pages := where (where site.Pages "Section" "projects") "Params.hidden" "!=" true }}
-            {{ range (.Paginate $project_pages).Pages }}
+            {{ range first 4 (where site.RegularPages "Section" "in" "projects") }}
                 {{ partial "post-summary.html" . }}
             {{ end }}
+            <a class="view-more-posts" href="projects">View more</a>
         </div>
     </div>
 
-    {{ partial "pagination.html" . }}
+    <!-- {{ partial "pagination.html" . }} -->
 
 {{ end }}

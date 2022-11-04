@@ -20,6 +20,7 @@ I am the designer of this website.
 - Web Design (As you can see)
 - English, Arabic, Japanese
 - CV Writing
+- Bad at Overwatch (Noob gamer)
 
 ### // Publications
 - [How To Design Perfect Websites]() (2022, IEEE)
