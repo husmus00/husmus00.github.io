@@ -2,6 +2,9 @@
 
 :root {
     --accent-colour: #ff5858;
+    --bg-color: #27272a;
+    --container-color: #18181b;
+    --nav-bg-color: #202023;
 }
 
 .tracker {
@@ -15,7 +18,8 @@
 }
 
 body {
- background-color: #262626;
+ /* background-color: #262626; */
+ background-color: var(--bg-color);
  /* font-family: Firacode,monospace; */
 }
 
@@ -24,7 +28,7 @@ nav {
 }
 
 .container {
-    background-color: var(--bg-color);
+    background-color: var(--container-color);
     box-shadow: rgb(15, 15, 15) 0px 0px 0.6em;
     min-height: 100vh;
     padding: 0 2.5em;

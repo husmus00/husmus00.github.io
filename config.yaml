@@ -1,7 +1,7 @@
 languageCode: "en-gb"
 baseUrl: "husmus00.github.io"
 title: "husmus.dev"
-theme: ["github.com/Mitrichius/hugo-theme-anubis"]
+theme: "anubis"
 paginate: 5
 disqusShortname: null # "yourdiscussshortname"
 googleAnalytics: null

@@ -1,7 +1,7 @@
 # Curriculum Vitae
 View the PDF version [here](link)
 
-### ◆ Husmus
+### <span style="color: var(--accent-colour)">◆</span> Husmus
 My name is Husmus
 
 ### ◆ Summary
