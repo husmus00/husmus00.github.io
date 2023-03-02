@@ -89,7 +89,7 @@ nav {
 
 .category-section {
     border-top: thin solid var(--hr-color);
-    padding: 0.8em 0 0.5em 0;
+    padding: 0.8em 0 1.5em 0;
 }
 
 .section-title {
@@ -141,7 +141,7 @@ a:hover, a:focus, a:active {
     margin-left: 0.8em;
 }
 
-.common-footer {
+/* .common-footer {
     border-top: thin solid var(--hr-color);
     padding-bottom: 20px;
     padding-top: 1em;
@@ -150,5 +150,10 @@ a:hover, a:focus, a:active {
     display:flex;
     align-items:center;
     justify-content: center;
+} */
+
+.common-footer div {
+    text-align: center;
+    width: 100%;
 }
 
