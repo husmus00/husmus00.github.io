@@ -620,12 +620,6 @@ code.has-jax {
 
 /* Footer */
 
-.common-footer {
-    border-top: thin solid var(--hr-color);
-    padding: 0.5em;
-    font-size: 0.9em;
-}
-
 /* .common-footer-bottom {
     display: flex;
     flex-wrap: wrap;
