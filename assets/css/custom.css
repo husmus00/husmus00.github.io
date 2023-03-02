@@ -157,7 +157,7 @@ a:hover, a:focus, a:active {
 
 .common-footer {
     border-top: thin solid var(--hr-color);
-    padding: 0.5em;
+    padding: 1.5em;
     font-size: 0.9em;
     
 }
@@ -165,5 +165,9 @@ a:hover, a:focus, a:active {
 .common-footer div {
     text-align: center;
     width: 100%;
+}
+
+.common-footer p {
+    margin: 0;
 }
 
