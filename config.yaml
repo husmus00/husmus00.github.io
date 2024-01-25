@@ -12,7 +12,7 @@ menu:
   - identifier: cv
     name: CV
     title: CV
-    url: /cv.pdf/
+    url: /cv.pdf
     weight: 1
 
   - identifier: research
@@ -86,7 +86,7 @@ params:
   - id: github
     name: husmus00
   - id: linkedin
-    name: husmus
+    name: hussam-alhassan
 #  - id: hugo
 #    url: "https://gohugo.io/"
 #    icon: "hugo"
