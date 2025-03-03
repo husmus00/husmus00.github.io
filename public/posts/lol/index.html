@@ -12,7 +12,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="referrer" content="no-referrer-when-downgrade">
 
-<title>My First Post - husmus.dev</title>
+<title>Getting Started with The Rust FFI - husmus.dev</title>
 
 <meta name="description" content="yay">
 
@@ -108,19 +108,19 @@
 
 <meta property="og:url" content="//localhost:1313/posts/lol/">
   <meta property="og:site_name" content="husmus.dev">
-  <meta property="og:title" content="My First Post">
+  <meta property="og:title" content="Getting Started with The Rust FFI">
   <meta property="og:description" content="yay">
   <meta property="og:locale" content="en_gb">
   <meta property="og:type" content="article">
     <meta property="article:section" content="posts">
     <meta property="article:published_time" content="2022-10-29T00:24:12+03:00">
     <meta property="article:modified_time" content="2022-10-29T00:24:12+03:00">
-    <meta property="article:tag" content="Japan">
-    <meta property="article:tag" content="Test">
+    <meta property="article:tag" content="Rust">
+    <meta property="article:tag" content="Embedded">
 
 
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="My First Post">
+  <meta name="twitter:title" content="Getting Started with The Rust FFI">
   <meta name="twitter:description" content="yay">
 
 
@@ -222,19 +222,43 @@
         </header>
         <main id="main" tabindex="-1"> 
             
-    <p>My trip to Japan <sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup></p>
-<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-      <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube-nocookie.com/embed/IuTDuvYr7f0?autoplay=0&amp;controls=1&amp;end=0&amp;loop=0&amp;mute=0&amp;start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"></iframe>
-    </div>
-
-<div class="footnotes" role="doc-endnotes">
-<hr>
+    <p>After spending some time experimenting with Rust&rsquo;s FFI, I thought I&rsquo;d write a short article on getting started with it, pointing to some useful resources and tools.</p>
+<p>The Rust FFI (Foreign-Function Interface) provides a way for Rust code to natively &ldquo;talk&rdquo; to C code and C APIs / libraries. This makes it possible to use Rust in existing C projects and allows for communicating directly with existing OS APIs (e.g., POSIX, WinAPI). This involves using types provided in the standard library (std::ffi) or core::ffi when using no_std on bare metal.</p>
+<p>To call C code from Rust, a function definition must be provided within an <code>extern &quot;C&quot;</code> block, similar to the signature of the actual C function. This function signature will be written in Rust but must use types provided by the FFI instead of Rust&rsquo;s native types (e.g., c_int over i32).</p>
+<p>To call Rust code from C, a Rust function must be defined as <code>pub extern &quot;C&quot;</code> and must use C types in its signature. The #[no_mangle] annotation must also be used to ensure the Rust compiler doesn&rsquo;t change the function name during compilation. For more details, see <a href="https://lnkd.in/gHqQNgMj">https://lnkd.in/gHqQNgMj</a></p>
+<p>Note that interoperating with external code requires using an <code>unsafe</code> block as the compiler cannot provide safety guarantees for non-Rust code.</p>
+<p>I believe the FFI should be seen as a tool to help transition to Rust, rather than an excuse not to use it when it eventually makes life difficult :)
+Rust does have a steeper learning curve than C, but its benefits are well worth the investment.</p>
+<p>The Rust embedded book is a great place to learn more about the FFI and dealing with no_std:
+<a href="https://lnkd.in/gG-sdAdh">https://lnkd.in/gG-sdAdh</a></p>
+<ul>
+<li>Some useful resources:</li>
+</ul>
 <ol>
-<li id="fn:1">
-<p>This is an unaffiliated video used for testing&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+<li>
+<p>libc:
+Provides an interface to the C standard library for the FFI and can work in no_std environments.
+<a href="https://lnkd.in/g3jXYzBt">https://lnkd.in/g3jXYzBt</a></p>
+</li>
+<li>
+<p>nix:
+A higher-level wrapper around libc for *nix systems, providing a safer abstraction.
+<a href="https://lnkd.in/gk3Cha_t">https://lnkd.in/gk3Cha_t</a></p>
+</li>
+<li>
+<p>cc-rs:
+A build-stage tool that makes it easy to include C files within Rust&rsquo;s build process by communicating with the platform&rsquo;s C compiler.
+<a href="https://lnkd.in/gy9PxG2z">https://lnkd.in/gy9PxG2z</a></p>
+</li>
+<li>
+<p>rust-bindgen:
+A tool to automatically generate FFI bindings from a C header file.
+<a href="https://lnkd.in/gP8hX9vF">https://lnkd.in/gP8hX9vF</a></p>
 </li>
 </ol>
-</div>
+<hr>
+<p>The next thing I want to do is experiment with the embedded-hal, to learn how to use Rust to communicate directly with embedded hardware.
+<a href="https://lnkd.in/gnV4e-sW">https://lnkd.in/gnV4e-sW</a></p>
 
 
         </main>

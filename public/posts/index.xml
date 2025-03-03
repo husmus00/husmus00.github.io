@@ -6,44 +6,56 @@
     <description>husmus.dev</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
-    <lastBuildDate>Sat, 29 Oct 2022 16:40:05 +0300</lastBuildDate>
+    <lastBuildDate>Mon, 25 Mar 2024 14:24:12 +0300</lastBuildDate>
     
     <atom:link href="//localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>My Second Post</title>
-      <link>//localhost:1313/posts/my-second-post/</link>
-      <pubDate>Sat, 29 Oct 2022 16:40:05 +0300</pubDate>
+      <title>Getting Started with The Rust FFI</title>
+      <link>//localhost:1313/posts/rust-ffi/</link>
+      <pubDate>Mon, 25 Mar 2024 14:24:12 +0300</pubDate>
       
-      <guid>//localhost:1313/posts/my-second-post/</guid>
-      <description>&lt;p&gt;My research ideas&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;def&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;hello&lt;/span&gt;() &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-2022-10-29 16:40:05 &amp;#43;0300 &amp;#43;0300
-&lt;p&gt;&lt;a href=&#34;//localhost:1313/about/&#34;&gt;Who I am&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Check out my first post &lt;a href=&#34;//localhost:1313/posts/lol/&#34;&gt;here&lt;/a&gt;&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>My First Post</title>
-      <link>//localhost:1313/posts/lol/</link>
-      <pubDate>Sat, 29 Oct 2022 00:24:12 +0300</pubDate>
-      
-      <guid>//localhost:1313/posts/lol/</guid>
-      <description>&lt;p&gt;My trip to Japan &lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
-&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
-      &lt;iframe allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share&#34; allowfullscreen=&#34;allowfullscreen&#34; loading=&#34;eager&#34; referrerpolicy=&#34;strict-origin-when-cross-origin&#34; src=&#34;https://www.youtube-nocookie.com/embed/IuTDuvYr7f0?autoplay=0&amp;amp;controls=1&amp;amp;end=0&amp;amp;loop=0&amp;amp;mute=0&amp;amp;start=0&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; title=&#34;YouTube video&#34;&gt;&lt;/iframe&gt;
-    &lt;/div&gt;
-
-&lt;div class=&#34;footnotes&#34; role=&#34;doc-endnotes&#34;&gt;
-&lt;hr&gt;
+      <guid>//localhost:1313/posts/rust-ffi/</guid>
+      <description>&lt;h2 id=&#34;getting-started-with-the-rust-ffi&#34; &gt;Getting Started with The Rust FFI
+&lt;span&gt;
+    &lt;a href=&#34;#getting-started-with-the-rust-ffi&#34;&gt;
+        &lt;svg viewBox=&#34;0 0 28 23&#34; height=&#34;100%&#34; width=&#34;19&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34;&gt;&lt;path d=&#34;M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71&#34; fill=&#34;none&#34; stroke-linecap=&#34;round&#34; stroke-miterlimit=&#34;10&#34; stroke-width=&#34;2&#34;/&gt;&lt;path d=&#34;M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71&#34; fill=&#34;none&#34; stroke-linecap=&#34;round&#34; stroke-miterlimit=&#34;10&#34; stroke-width=&#34;2&#34;/&gt;&lt;/svg&gt;
+    &lt;/a&gt;
+&lt;/span&gt;
+&lt;/h2&gt;&lt;br&gt;
+After spending some time experimenting with Rust&#39;s FFI, I thought I&#39;d write a short article on getting started with it, pointing to some useful resources and tools.
+&lt;p&gt;The Rust FFI (Foreign-Function Interface) provides a way for Rust code to natively &amp;ldquo;talk&amp;rdquo; to C code and C APIs / libraries. This makes it possible to use Rust in existing C projects and allows for communicating directly with existing OS APIs (e.g., POSIX, WinAPI). This involves using types provided in the standard library (std::ffi) or core::ffi when using no_std on bare metal.&lt;/p&gt;
+&lt;p&gt;To call C code from Rust, a function definition must be provided within an &lt;code&gt;extern &amp;quot;C&amp;quot;&lt;/code&gt; block, similar to the signature of the actual C function. This function signature will be written in Rust but must use types provided by the FFI instead of Rust&amp;rsquo;s native types (e.g., c_int over i32).&lt;/p&gt;
+&lt;p&gt;To call Rust code from C, a Rust function must be defined as &lt;code&gt;pub extern &amp;quot;C&amp;quot;&lt;/code&gt; and must use C types in its signature. The #[no_mangle] annotation must also be used to ensure the Rust compiler doesn&amp;rsquo;t change the function name during compilation. For more details, see &lt;a href=&#34;https://docs.rust-embedded.org/book/interoperability/index.html&#34;&gt;this&lt;/a&gt; page from The Embedded Rust Book.&lt;/p&gt;
+&lt;p&gt;Note that interoperating with external code requires using an &lt;code&gt;unsafe&lt;/code&gt; block as the compiler cannot provide safety guarantees for non-Rust code.&lt;/p&gt;
+&lt;p&gt;I believe the FFI should be seen as a tool to help transition to Rust, rather than an excuse not to use it when it eventually makes life difficult :)
+Rust does have a steeper learning curve than C, but its benefits are well worth the investment.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;(https://docs.rust-embedded.org/book/index.html)&#34;&gt;The Rust Embedded Book&lt;/a&gt; is a great place to learn more about the FFI and dealing with no_std.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Some useful resources:&lt;/li&gt;
+&lt;/ul&gt;
 &lt;ol&gt;
-&lt;li id=&#34;fn:1&#34;&gt;
-&lt;p&gt;This is an unaffiliated video used for testing&amp;#160;&lt;a href=&#34;#fnref:1&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/rust-lang/libc&#34;&gt;libc&lt;/a&gt;:
+Provides an interface to the C standard library for the FFI and can work in no_std environments.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/nix-rust/nix&#34;&gt;nix&lt;/a&gt;:
+A higher-level wrapper around libc for *nix systems, providing a safer abstraction.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/rust-lang/cc-rs&#34;&gt;cc-rs&lt;/a&gt;:
+A build-stage tool that makes it easy to include C files within Rust&amp;rsquo;s build process by communicating with the platform&amp;rsquo;s C compiler.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/rust-lang/rust-bindgen&#34;&gt;rust-bindgen&lt;/a&gt;:
+A tool to automatically generate FFI bindings from a C header file.
+&lt;a href=&#34;https://lnkd.in/gP8hX9vF&#34;&gt;https://lnkd.in/gP8hX9vF&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
-&lt;/div&gt;
+&lt;hr&gt;
+&lt;p&gt;The next thing I want to do is experiment with the &lt;a href=&#34;https://github.com/rust-embedded/embedded-hal&#34;&gt;embedded-hal&lt;/a&gt;, to learn how to use Rust to communicate directly with embedded hardware.&lt;/p&gt;
 </description>
     </item>
     

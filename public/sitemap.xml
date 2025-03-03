@@ -3,28 +3,22 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>//localhost:1313/</loc>
-    <lastmod>2022-10-29T16:40:05+03:00</lastmod>
+    <lastmod>2024-03-25T14:24:12+03:00</lastmod>
   </url><url>
     <loc>//localhost:1313/posts/</loc>
-    <lastmod>2022-10-29T16:40:05+03:00</lastmod>
+    <lastmod>2024-03-25T14:24:12+03:00</lastmod>
   </url><url>
-    <loc>//localhost:1313/posts/my-second-post/</loc>
-    <lastmod>2022-10-29T16:40:05+03:00</lastmod>
+    <loc>//localhost:1313/tags/embedded/</loc>
+    <lastmod>2024-03-25T14:24:12+03:00</lastmod>
   </url><url>
-    <loc>//localhost:1313/tags/research/</loc>
-    <lastmod>2022-10-29T16:40:05+03:00</lastmod>
+    <loc>//localhost:1313/posts/rust-ffi/</loc>
+    <lastmod>2024-03-25T14:24:12+03:00</lastmod>
+  </url><url>
+    <loc>//localhost:1313/tags/rust/</loc>
+    <lastmod>2024-03-25T14:24:12+03:00</lastmod>
   </url><url>
     <loc>//localhost:1313/tags/</loc>
-    <lastmod>2022-10-29T16:40:05+03:00</lastmod>
-  </url><url>
-    <loc>//localhost:1313/tags/japan/</loc>
-    <lastmod>2022-10-29T00:24:12+03:00</lastmod>
-  </url><url>
-    <loc>//localhost:1313/posts/lol/</loc>
-    <lastmod>2022-10-29T00:24:12+03:00</lastmod>
-  </url><url>
-    <loc>//localhost:1313/tags/test/</loc>
-    <lastmod>2022-10-29T00:24:12+03:00</lastmod>
+    <lastmod>2024-03-25T14:24:12+03:00</lastmod>
   </url><url>
     <loc>//localhost:1313/about/</loc>
   </url><url>
@@ -35,5 +29,11 @@
     <loc>//localhost:1313/projects/</loc>
   </url><url>
     <loc>//localhost:1313/categories/</loc>
+  </url><url>
+    <loc>//localhost:1313/tags/japan/</loc>
+  </url><url>
+    <loc>//localhost:1313/tags/research/</loc>
+  </url><url>
+    <loc>//localhost:1313/tags/test/</loc>
   </url>
 </urlset>
