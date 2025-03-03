@@ -16,10 +16,10 @@ menu:
     url: /cv.pdf
     weight: 1
 
-  - identifier: research
-    name: Research
-    title: Research
-    url: /research/
+  - identifier: blog
+    name: Blog
+    title: Blog
+    url: /posts/
     weight: 2
   
   - identifier: projects
@@ -27,12 +27,6 @@ menu:
     title: Projects
     url: /projects/
     weight: 3
-
-  - identifier: blog
-    name: Blog
-    title: Blog
-    url: /posts/
-    weight: 4
 
 params:
   author: "Husmus"
