@@ -1,1 +1,1 @@
-Greetings! My name is Hussam, and I'm a computer engineering graduate and controls software engineer working at the UKRI. You can find more information on my [Linkedin](https://linkedin.com/in/hussam-alhassan) and [GitHub](https://github.com/husmus00) pages, or contact me via hsm.link@proton.me.
+Greetings! I'm Hussam, a Computer Engineering graduate and Controls Software Engineer working at the UKRI. You can find more information on my [Linkedin](https://linkedin.com/in/hussam-alhassan) and [GitHub](https://github.com/husmus00) pages, or contact me via hsm.link@proton.me.
