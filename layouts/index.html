@@ -19,16 +19,6 @@
     </div>
 
     <div class="category-section">
-        <div class="section-title" ><a href="research">Research</a></div>
-        <div class="articles h-feed">
-            {{ range first 4 (where site.RegularPages "Section" "in" "research") }}
-                {{ partial "post-summary.html" . }}
-            {{ end }}
-            <a class="view-more-posts" href="research">View more</a>
-        </div>
-    </div>
-
-    <div class="category-section">
         <div class="section-title" ><a href="projects">Projects</a></div>
         <div class="articles h-feed">
             {{ range first 4 (where site.RegularPages "Section" "in" "projects") }}

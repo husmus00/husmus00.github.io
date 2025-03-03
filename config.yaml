@@ -2,9 +2,10 @@ languageCode: "en-gb"
 baseUrl: "husmus00.github.io"
 title: "husmus.dev"
 # theme: "anubis"
-paginate: 5
+pagination:
+  PagerSize: 5
 disqusShortname: null # "yourdiscussshortname"
-googleAnalytics: null
+# googleAnalytics: null
 enableRobotsTXT: true
 
 menu:
@@ -99,11 +100,11 @@ markup:
 privacy:
   disqus:
     disable: true
-  googleAnalytics:
-    disable: true
+  # googleAnalytics:
+  #   disable: true
   instagram:
     disable: true
-  twitter:
+  x:
     disable: true
   vimeo:
     disable: true

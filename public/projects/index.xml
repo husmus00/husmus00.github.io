@@ -1,7 +1,51 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>husmus.dev</title><link>husmus00.github.io/projects/</link><description>husmus.dev</description><generator>Hugo -- gohugo.io</generator><language>en-gb</language><lastBuildDate>Sat, 29 Oct 2022 21:50:42 +0300</lastBuildDate><atom:link href="husmus00.github.io/projects/index.xml" rel="self" type="application/rss+xml"/><item><title>First Project</title><link>husmus00.github.io/projects/first-project/</link><pubDate>Sat, 29 Oct 2022 21:50:42 +0300</pubDate><guid>husmus00.github.io/projects/first-project/</guid><description>&lt;h2 id="my-first-project" >My First Project
-&lt;span>
-&lt;a href="#my-first-project">
-&lt;svg viewBox="0 0 28 23" height="100%" width="19" xmlns="http://www.w3.org/2000/svg">&lt;path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>&lt;path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>&lt;/svg>
-&lt;/a>
-&lt;/span>
-&lt;/h2>&lt;p>Project goes here.&lt;/p></description></item><item><title>Second Project</title><link>husmus00.github.io/projects/second-project/</link><pubDate>Sat, 29 Oct 2022 21:50:42 +0300</pubDate><guid>husmus00.github.io/projects/second-project/</guid><description>&lt;p>My Second Project&lt;/p></description></item><item><title>Third Project</title><link>husmus00.github.io/projects/third-project/</link><pubDate>Sat, 29 Oct 2022 21:50:42 +0300</pubDate><guid>husmus00.github.io/projects/third-project/</guid><description>&lt;p>My Third Project&lt;/p></description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>husmus.dev</title>
+    <link>//localhost:1313/projects/</link>
+    <description>husmus.dev</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Sat, 29 Oct 2022 21:50:42 +0300</lastBuildDate>
+    
+    <atom:link href="//localhost:1313/projects/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>First Project</title>
+      <link>//localhost:1313/projects/first-project/</link>
+      <pubDate>Sat, 29 Oct 2022 21:50:42 +0300</pubDate>
+      
+      <guid>//localhost:1313/projects/first-project/</guid>
+      <description>&lt;h2 id=&#34;my-first-project&#34; &gt;My First Project
+&lt;span&gt;
+    &lt;a href=&#34;#my-first-project&#34;&gt;
+        &lt;svg viewBox=&#34;0 0 28 23&#34; height=&#34;100%&#34; width=&#34;19&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34;&gt;&lt;path d=&#34;M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71&#34; fill=&#34;none&#34; stroke-linecap=&#34;round&#34; stroke-miterlimit=&#34;10&#34; stroke-width=&#34;2&#34;/&gt;&lt;path d=&#34;M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71&#34; fill=&#34;none&#34; stroke-linecap=&#34;round&#34; stroke-miterlimit=&#34;10&#34; stroke-width=&#34;2&#34;/&gt;&lt;/svg&gt;
+    &lt;/a&gt;
+&lt;/span&gt;
+&lt;/h2&gt;&lt;p&gt;Project goes here.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Second Project</title>
+      <link>//localhost:1313/projects/second-project/</link>
+      <pubDate>Sat, 29 Oct 2022 21:50:42 +0300</pubDate>
+      
+      <guid>//localhost:1313/projects/second-project/</guid>
+      <description>&lt;p&gt;My Second Project&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Third Project</title>
+      <link>//localhost:1313/projects/third-project/</link>
+      <pubDate>Sat, 29 Oct 2022 21:50:42 +0300</pubDate>
+      
+      <guid>//localhost:1313/projects/third-project/</guid>
+      <description>&lt;p&gt;My Third Project&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
