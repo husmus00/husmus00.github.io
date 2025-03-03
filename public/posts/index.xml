@@ -54,7 +54,6 @@ A tool to automatically generate FFI bindings from a C header file.
 &lt;a href=&#34;https://lnkd.in/gP8hX9vF&#34;&gt;https://lnkd.in/gP8hX9vF&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
-&lt;hr&gt;
 &lt;p&gt;The next thing I want to do is experiment with the &lt;a href=&#34;https://github.com/rust-embedded/embedded-hal&#34;&gt;embedded-hal&lt;/a&gt;, to learn how to use Rust to communicate directly with embedded hardware.&lt;/p&gt;
 </description>
     </item>

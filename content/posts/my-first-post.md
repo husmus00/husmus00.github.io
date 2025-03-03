@@ -43,7 +43,7 @@ A build-stage tool that makes it easy to include C files within Rust's build pro
 A tool to automatically generate FFI bindings from a C header file.
 https://lnkd.in/gP8hX9vF
 
----
+
 The next thing I want to do is experiment with the [embedded-hal](https://github.com/rust-embedded/embedded-hal), to learn how to use Rust to communicate directly with embedded hardware.
 
 
